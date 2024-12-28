@@ -1,0 +1,958 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE7F64E22D207CE40060BAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64E12D207CE40060BAB5 /* AppDelegate.swift */; };
+		CE7F64E42D207CE40060BAB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64E32D207CE40060BAB5 /* SceneDelegate.swift */; };
+		CE7F64E72D207CE40060BAB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64E52D207CE40060BAB5 /* LaunchScreen.storyboard */; };
+		CE7F64EA2D207CE40060BAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64E82D207CE40060BAB5 /* Main.storyboard */; };
+		CE7F64F32D207CE40060BAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64F22D207CE40060BAB5 /* AppDelegate.swift */; };
+		CE7F64F62D207CE40060BAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64F42D207CE40060BAB5 /* Main.storyboard */; };
+		CE7F64FD2D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE7F64FC2D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE7F65072D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CE7F65062D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CE7F650D2D207CE40060BAB5 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64C82D207CE40060BAB5 /* Main.html */; };
+		CE7F650E2D207CE40060BAB5 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64C82D207CE40060BAB5 /* Main.html */; };
+		CE7F650F2D207CE40060BAB5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CA2D207CE40060BAB5 /* Icon.png */; };
+		CE7F65102D207CE40060BAB5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CA2D207CE40060BAB5 /* Icon.png */; };
+		CE7F65112D207CE40060BAB5 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CB2D207CE40060BAB5 /* Style.css */; };
+		CE7F65122D207CE40060BAB5 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CB2D207CE40060BAB5 /* Style.css */; };
+		CE7F65132D207CE40060BAB5 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CC2D207CE40060BAB5 /* Script.js */; };
+		CE7F65142D207CE40060BAB5 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CC2D207CE40060BAB5 /* Script.js */; };
+		CE7F65152D207CE40060BAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64CD2D207CE40060BAB5 /* ViewController.swift */; };
+		CE7F65162D207CE40060BAB5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64CD2D207CE40060BAB5 /* ViewController.swift */; };
+		CE7F65172D207CE40060BAB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CE2D207CE40060BAB5 /* Assets.xcassets */; };
+		CE7F65182D207CE40060BAB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64CE2D207CE40060BAB5 /* Assets.xcassets */; };
+		CE7F65192D207CE40060BAB5 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64D02D207CE40060BAB5 /* SafariWebExtensionHandler.swift */; };
+		CE7F651A2D207CE40060BAB5 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64D02D207CE40060BAB5 /* SafariWebExtensionHandler.swift */; };
+		CE7F651B2D207CE40060BAB5 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D22D207CE40060BAB5 /* _locales */; };
+		CE7F651C2D207CE40060BAB5 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D22D207CE40060BAB5 /* _locales */; };
+		CE7F651D2D207CE40060BAB5 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D32D207CE40060BAB5 /* images */; };
+		CE7F651E2D207CE40060BAB5 /* images in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D32D207CE40060BAB5 /* images */; };
+		CE7F651F2D207CE40060BAB5 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D42D207CE40060BAB5 /* manifest.json */; };
+		CE7F65202D207CE40060BAB5 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D42D207CE40060BAB5 /* manifest.json */; };
+		CE7F65212D207CE40060BAB5 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D52D207CE40060BAB5 /* background.js */; };
+		CE7F65222D207CE40060BAB5 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D52D207CE40060BAB5 /* background.js */; };
+		CE7F65232D207CE40060BAB5 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D62D207CE40060BAB5 /* content.js */; };
+		CE7F65242D207CE40060BAB5 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D62D207CE40060BAB5 /* content.js */; };
+		CE7F65252D207CE40060BAB5 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D72D207CE40060BAB5 /* popup.html */; };
+		CE7F65262D207CE40060BAB5 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D72D207CE40060BAB5 /* popup.html */; };
+		CE7F65272D207CE40060BAB5 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D82D207CE40060BAB5 /* popup.css */; };
+		CE7F65282D207CE40060BAB5 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D82D207CE40060BAB5 /* popup.css */; };
+		CE7F65292D207CE40060BAB5 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D92D207CE40060BAB5 /* popup.js */; };
+		CE7F652A2D207CE40060BAB5 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D92D207CE40060BAB5 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE7F64FE2D207CE40060BAB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7F64C22D207CE40060BAB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7F64FB2D207CE40060BAB5;
+			remoteInfo = "ProcrasnationBlocker Extension (iOS)";
+		};
+		CE7F65082D207CE40060BAB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7F64C22D207CE40060BAB5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7F65052D207CE40060BAB5;
+			remoteInfo = "ProcrasnationBlocker Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE7F65302D207CE40060BAB5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE7F64FD2D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F65372D207CE40060BAB5 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CE7F65072D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		CE7F64C92D207CE40060BAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		CE7F64CA2D207CE40060BAB5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		CE7F64CB2D207CE40060BAB5 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		CE7F64CC2D207CE40060BAB5 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		CE7F64CD2D207CE40060BAB5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE7F64CE2D207CE40060BAB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE7F64D02D207CE40060BAB5 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		CE7F64D22D207CE40060BAB5 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		CE7F64D32D207CE40060BAB5 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		CE7F64D42D207CE40060BAB5 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		CE7F64D52D207CE40060BAB5 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		CE7F64D62D207CE40060BAB5 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		CE7F64D72D207CE40060BAB5 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		CE7F64D82D207CE40060BAB5 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		CE7F64D92D207CE40060BAB5 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		CE7F64DE2D207CE40060BAB5 /* ProcrasnationBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcrasnationBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7F64E12D207CE40060BAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE7F64E32D207CE40060BAB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE7F64E62D207CE40060BAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE7F64E92D207CE40060BAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE7F64EB2D207CE40060BAB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7F64F02D207CE40060BAB5 /* ProcrasnationBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcrasnationBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7F64F22D207CE40060BAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE7F64F52D207CE40060BAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE7F64F72D207CE40060BAB5 /* ProcrasnationBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProcrasnationBlocker.entitlements; sourceTree = "<group>"; };
+		CE7F64FC2D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ProcrasnationBlocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7F65012D207CE40060BAB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7F65062D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ProcrasnationBlocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7F650B2D207CE40060BAB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE7F650C2D207CE40060BAB5 /* ProcrasnationBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProcrasnationBlocker.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE7F64DB2D207CE40060BAB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F64ED2D207CE40060BAB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F64F92D207CE40060BAB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F65032D207CE40060BAB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE7F64C12D207CE40060BAB5 = {
+			isa = PBXGroup;
+			children = (
+				CE7F64C62D207CE40060BAB5 /* Shared (App) */,
+				CE7F64CF2D207CE40060BAB5 /* Shared (Extension) */,
+				CE7F64E02D207CE40060BAB5 /* iOS (App) */,
+				CE7F64F12D207CE40060BAB5 /* macOS (App) */,
+				CE7F65002D207CE40060BAB5 /* iOS (Extension) */,
+				CE7F650A2D207CE40060BAB5 /* macOS (Extension) */,
+				CE7F64DF2D207CE40060BAB5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE7F64C62D207CE40060BAB5 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F64CD2D207CE40060BAB5 /* ViewController.swift */,
+				CE7F64CE2D207CE40060BAB5 /* Assets.xcassets */,
+				CE7F64C72D207CE40060BAB5 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		CE7F64C72D207CE40060BAB5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F64C82D207CE40060BAB5 /* Main.html */,
+				CE7F64CA2D207CE40060BAB5 /* Icon.png */,
+				CE7F64CB2D207CE40060BAB5 /* Style.css */,
+				CE7F64CC2D207CE40060BAB5 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE7F64CF2D207CE40060BAB5 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F64D02D207CE40060BAB5 /* SafariWebExtensionHandler.swift */,
+				CE7F64D12D207CE40060BAB5 /* Resources */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		CE7F64D12D207CE40060BAB5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F64D22D207CE40060BAB5 /* _locales */,
+				CE7F64D32D207CE40060BAB5 /* images */,
+				CE7F64D42D207CE40060BAB5 /* manifest.json */,
+				CE7F64D52D207CE40060BAB5 /* background.js */,
+				CE7F64D62D207CE40060BAB5 /* content.js */,
+				CE7F64D72D207CE40060BAB5 /* popup.html */,
+				CE7F64D82D207CE40060BAB5 /* popup.css */,
+				CE7F64D92D207CE40060BAB5 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CE7F64DF2D207CE40060BAB5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F64DE2D207CE40060BAB5 /* ProcrasnationBlocker.app */,
+				CE7F64F02D207CE40060BAB5 /* ProcrasnationBlocker.app */,
+				CE7F64FC2D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */,
+				CE7F65062D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE7F64E02D207CE40060BAB5 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F64E12D207CE40060BAB5 /* AppDelegate.swift */,
+				CE7F64E32D207CE40060BAB5 /* SceneDelegate.swift */,
+				CE7F64E52D207CE40060BAB5 /* LaunchScreen.storyboard */,
+				CE7F64E82D207CE40060BAB5 /* Main.storyboard */,
+				CE7F64EB2D207CE40060BAB5 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		CE7F64F12D207CE40060BAB5 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F64F22D207CE40060BAB5 /* AppDelegate.swift */,
+				CE7F64F42D207CE40060BAB5 /* Main.storyboard */,
+				CE7F64F72D207CE40060BAB5 /* ProcrasnationBlocker.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		CE7F65002D207CE40060BAB5 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F65012D207CE40060BAB5 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		CE7F650A2D207CE40060BAB5 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				CE7F650B2D207CE40060BAB5 /* Info.plist */,
+				CE7F650C2D207CE40060BAB5 /* ProcrasnationBlocker.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE7F64DD2D207CE40060BAB5 /* ProcrasnationBlocker (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7F65312D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker (iOS)" */;
+			buildPhases = (
+				CE7F64DA2D207CE40060BAB5 /* Sources */,
+				CE7F64DB2D207CE40060BAB5 /* Frameworks */,
+				CE7F64DC2D207CE40060BAB5 /* Resources */,
+				CE7F65302D207CE40060BAB5 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE7F64FF2D207CE40060BAB5 /* PBXTargetDependency */,
+			);
+			name = "ProcrasnationBlocker (iOS)";
+			productName = "ProcrasnationBlocker (iOS)";
+			productReference = CE7F64DE2D207CE40060BAB5 /* ProcrasnationBlocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE7F64EF2D207CE40060BAB5 /* ProcrasnationBlocker (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7F65382D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker (macOS)" */;
+			buildPhases = (
+				CE7F64EC2D207CE40060BAB5 /* Sources */,
+				CE7F64ED2D207CE40060BAB5 /* Frameworks */,
+				CE7F64EE2D207CE40060BAB5 /* Resources */,
+				CE7F65372D207CE40060BAB5 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE7F65092D207CE40060BAB5 /* PBXTargetDependency */,
+			);
+			name = "ProcrasnationBlocker (macOS)";
+			productName = "ProcrasnationBlocker (macOS)";
+			productReference = CE7F64F02D207CE40060BAB5 /* ProcrasnationBlocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE7F64FB2D207CE40060BAB5 /* ProcrasnationBlocker Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7F652D2D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker Extension (iOS)" */;
+			buildPhases = (
+				CE7F64F82D207CE40060BAB5 /* Sources */,
+				CE7F64F92D207CE40060BAB5 /* Frameworks */,
+				CE7F64FA2D207CE40060BAB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProcrasnationBlocker Extension (iOS)";
+			productName = "ProcrasnationBlocker Extension (iOS)";
+			productReference = CE7F64FC2D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		CE7F65052D207CE40060BAB5 /* ProcrasnationBlocker Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7F65342D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker Extension (macOS)" */;
+			buildPhases = (
+				CE7F65022D207CE40060BAB5 /* Sources */,
+				CE7F65032D207CE40060BAB5 /* Frameworks */,
+				CE7F65042D207CE40060BAB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ProcrasnationBlocker Extension (macOS)";
+			productName = "ProcrasnationBlocker Extension (macOS)";
+			productReference = CE7F65062D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE7F64C22D207CE40060BAB5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					CE7F64DD2D207CE40060BAB5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE7F64EF2D207CE40060BAB5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE7F64FB2D207CE40060BAB5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					CE7F65052D207CE40060BAB5 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = CE7F64C52D207CE40060BAB5 /* Build configuration list for PBXProject "ProcrasnationBlocker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE7F64C12D207CE40060BAB5;
+			productRefGroup = CE7F64DF2D207CE40060BAB5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE7F64DD2D207CE40060BAB5 /* ProcrasnationBlocker (iOS) */,
+				CE7F64EF2D207CE40060BAB5 /* ProcrasnationBlocker (macOS) */,
+				CE7F64FB2D207CE40060BAB5 /* ProcrasnationBlocker Extension (iOS) */,
+				CE7F65052D207CE40060BAB5 /* ProcrasnationBlocker Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE7F64DC2D207CE40060BAB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F650F2D207CE40060BAB5 /* Icon.png in Resources */,
+				CE7F64E72D207CE40060BAB5 /* LaunchScreen.storyboard in Resources */,
+				CE7F650D2D207CE40060BAB5 /* Main.html in Resources */,
+				CE7F65132D207CE40060BAB5 /* Script.js in Resources */,
+				CE7F65172D207CE40060BAB5 /* Assets.xcassets in Resources */,
+				CE7F64EA2D207CE40060BAB5 /* Main.storyboard in Resources */,
+				CE7F65112D207CE40060BAB5 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F64EE2D207CE40060BAB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F65102D207CE40060BAB5 /* Icon.png in Resources */,
+				CE7F65122D207CE40060BAB5 /* Style.css in Resources */,
+				CE7F64F62D207CE40060BAB5 /* Main.storyboard in Resources */,
+				CE7F65142D207CE40060BAB5 /* Script.js in Resources */,
+				CE7F65182D207CE40060BAB5 /* Assets.xcassets in Resources */,
+				CE7F650E2D207CE40060BAB5 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F64FA2D207CE40060BAB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F65212D207CE40060BAB5 /* background.js in Resources */,
+				CE7F65272D207CE40060BAB5 /* popup.css in Resources */,
+				CE7F65252D207CE40060BAB5 /* popup.html in Resources */,
+				CE7F651D2D207CE40060BAB5 /* images in Resources */,
+				CE7F651F2D207CE40060BAB5 /* manifest.json in Resources */,
+				CE7F651B2D207CE40060BAB5 /* _locales in Resources */,
+				CE7F65232D207CE40060BAB5 /* content.js in Resources */,
+				CE7F65292D207CE40060BAB5 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F65042D207CE40060BAB5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F65222D207CE40060BAB5 /* background.js in Resources */,
+				CE7F65282D207CE40060BAB5 /* popup.css in Resources */,
+				CE7F65262D207CE40060BAB5 /* popup.html in Resources */,
+				CE7F651E2D207CE40060BAB5 /* images in Resources */,
+				CE7F65202D207CE40060BAB5 /* manifest.json in Resources */,
+				CE7F651C2D207CE40060BAB5 /* _locales in Resources */,
+				CE7F65242D207CE40060BAB5 /* content.js in Resources */,
+				CE7F652A2D207CE40060BAB5 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE7F64DA2D207CE40060BAB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F65152D207CE40060BAB5 /* ViewController.swift in Sources */,
+				CE7F64E22D207CE40060BAB5 /* AppDelegate.swift in Sources */,
+				CE7F64E42D207CE40060BAB5 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F64EC2D207CE40060BAB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F65162D207CE40060BAB5 /* ViewController.swift in Sources */,
+				CE7F64F32D207CE40060BAB5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F64F82D207CE40060BAB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F65192D207CE40060BAB5 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE7F65022D207CE40060BAB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7F651A2D207CE40060BAB5 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE7F64FF2D207CE40060BAB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7F64FB2D207CE40060BAB5 /* ProcrasnationBlocker Extension (iOS) */;
+			targetProxy = CE7F64FE2D207CE40060BAB5 /* PBXContainerItemProxy */;
+		};
+		CE7F65092D207CE40060BAB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7F65052D207CE40060BAB5 /* ProcrasnationBlocker Extension (macOS) */;
+			targetProxy = CE7F65082D207CE40060BAB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE7F64C82D207CE40060BAB5 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7F64C92D207CE40060BAB5 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		CE7F64E52D207CE40060BAB5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7F64E62D207CE40060BAB5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		CE7F64E82D207CE40060BAB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7F64E92D207CE40060BAB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE7F64F42D207CE40060BAB5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE7F64F52D207CE40060BAB5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE7F652B2D207CE40060BAB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE7F652C2D207CE40060BAB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CE7F652E2D207CE40060BAB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ProcrasnationBlocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker.Extension;
+				PRODUCT_NAME = "ProcrasnationBlocker Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE7F652F2D207CE40060BAB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ProcrasnationBlocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker.Extension;
+				PRODUCT_NAME = "ProcrasnationBlocker Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE7F65322D207CE40060BAB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ProcrasnationBlocker;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker;
+				PRODUCT_NAME = ProcrasnationBlocker;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE7F65332D207CE40060BAB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ProcrasnationBlocker;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker;
+				PRODUCT_NAME = ProcrasnationBlocker;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE7F65352D207CE40060BAB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/ProcrasnationBlocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ProcrasnationBlocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker.Extension;
+				PRODUCT_NAME = "ProcrasnationBlocker Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE7F65362D207CE40060BAB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/ProcrasnationBlocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ProcrasnationBlocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker.Extension;
+				PRODUCT_NAME = "ProcrasnationBlocker Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CE7F65392D207CE40060BAB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/ProcrasnationBlocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ProcrasnationBlocker;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker;
+				PRODUCT_NAME = ProcrasnationBlocker;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CE7F653A2D207CE40060BAB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/ProcrasnationBlocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ProcrasnationBlocker;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = forwardautomations.ProcrasnationBlocker;
+				PRODUCT_NAME = ProcrasnationBlocker;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE7F64C52D207CE40060BAB5 /* Build configuration list for PBXProject "ProcrasnationBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7F652B2D207CE40060BAB5 /* Debug */,
+				CE7F652C2D207CE40060BAB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7F652D2D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7F652E2D207CE40060BAB5 /* Debug */,
+				CE7F652F2D207CE40060BAB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7F65312D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7F65322D207CE40060BAB5 /* Debug */,
+				CE7F65332D207CE40060BAB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7F65342D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7F65352D207CE40060BAB5 /* Debug */,
+				CE7F65362D207CE40060BAB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7F65382D207CE40060BAB5 /* Build configuration list for PBXNativeTarget "ProcrasnationBlocker (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7F65392D207CE40060BAB5 /* Debug */,
+				CE7F653A2D207CE40060BAB5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE7F64C22D207CE40060BAB5 /* Project object */;
+}
