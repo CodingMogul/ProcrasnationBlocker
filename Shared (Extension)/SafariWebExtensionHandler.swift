@@ -1,26 +1,32 @@
-//
-//  SafariWebExtensionHandler.swift
-//  Shared (Extension)
-//
-//  Created by Bobvi Thomas on 12/28/24.
-//
-
 import SafariServices
 import os.log
 
-let SFExtensionMessageKey = "message"
-
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
+    private let SFExtensionMessageKey = "message"
+    private let userDefaults = UserDefaults(suiteName: "group.com.forwadautomations.ProcrasnationBlocker") // Use app group for sharing data
 
     func beginRequest(with context: NSExtensionContext) {
-        let item = context.inputItems[0] as! NSExtensionItem
-        let message = item.userInfo?[SFExtensionMessageKey]
-        os_log(.default, "Received message from browser.runtime.sendNativeMessage: %@", message as! CVarArg)
+        guard let request = context.inputItems.first as? NSExtensionItem,
+              let message = request.userInfo?[SFExtensionMessageKey] as? String else {
+            os_log(.error, "Invalid request received.")
+            return
+        }
+
+        os_log(.default, "Received message: %@", message)
 
         let response = NSExtensionItem()
-        response.userInfo = [ SFExtensionMessageKey: [ "Response to": message ] ]
+        if message == "getBlockedSites" {
+            let blockedSites = userDefaults?.array(forKey: "blockedSites") as? [String] ?? []
+            os_log(.default, "Returning blocked sites: %@", blockedSites)
+            response.userInfo = [SFExtensionMessageKey: ["blockedSites": blockedSites]]
+        } else if message == "updateBlockedSites" {
+            if let newBlockedSites = request.userInfo?["blockedSites"] as? [String] {
+                userDefaults?.setValue(newBlockedSites, forKey: "blockedSites")
+                os_log(.default, "Updated blocked sites: %@", newBlockedSites)
+            }
+            response.userInfo = [SFExtensionMessageKey: ["success": true]]
+        }
 
         context.completeRequest(returningItems: [response], completionHandler: nil)
     }
-
 }

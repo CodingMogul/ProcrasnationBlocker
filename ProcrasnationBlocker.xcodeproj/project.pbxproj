@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE37EF752D20BA63009450CC /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37EF742D20BA63009450CC /* AppDataManager.swift */; };
+		CE37EF772D20BA7D009450CC /* BlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37EF762D20BA7D009450CC /* BlacklistView.swift */; };
+		CE37EF792D20BA95009450CC /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37EF782D20BA95009450CC /* MainTabView.swift */; };
+		CE37EF7B2D20BAB2009450CC /* PornBlockerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37EF7A2D20BAB2009450CC /* PornBlockerView.swift */; };
+		CE37EF7D2D20BADC009450CC /* SocialMediaBlacklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37EF7C2D20BADC009450CC /* SocialMediaBlacklistView.swift */; };
+		CE37EF7F2D20BAEE009450CC /* WhitelistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE37EF7E2D20BAEE009450CC /* WhitelistView.swift */; };
 		CE7F64E22D207CE40060BAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64E12D207CE40060BAB5 /* AppDelegate.swift */; };
 		CE7F64E42D207CE40060BAB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64E32D207CE40060BAB5 /* SceneDelegate.swift */; };
 		CE7F64E72D207CE40060BAB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64E52D207CE40060BAB5 /* LaunchScreen.storyboard */; };
@@ -90,6 +96,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CE37EF742D20BA63009450CC /* AppDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataManager.swift; sourceTree = "<group>"; };
+		CE37EF762D20BA7D009450CC /* BlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlacklistView.swift; sourceTree = "<group>"; };
+		CE37EF782D20BA95009450CC /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		CE37EF7A2D20BAB2009450CC /* PornBlockerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PornBlockerView.swift; sourceTree = "<group>"; };
+		CE37EF7C2D20BADC009450CC /* SocialMediaBlacklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMediaBlacklistView.swift; sourceTree = "<group>"; };
+		CE37EF7E2D20BAEE009450CC /* WhitelistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhitelistView.swift; sourceTree = "<group>"; };
+		CE37EF802D20BDAE009450CC /* ProcrasnationBlocker (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ProcrasnationBlocker (iOS).entitlements"; sourceTree = "<group>"; };
+		CE37EF812D20BE43009450CC /* ProcrasnationBlocker Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ProcrasnationBlocker Extension (iOS).entitlements"; sourceTree = "<group>"; };
 		CE7F64C92D207CE40060BAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		CE7F64CA2D207CE40060BAB5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		CE7F64CB2D207CE40060BAB5 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -157,6 +171,8 @@
 		CE7F64C12D207CE40060BAB5 = {
 			isa = PBXGroup;
 			children = (
+				CE37EF812D20BE43009450CC /* ProcrasnationBlocker Extension (iOS).entitlements */,
+				CE37EF802D20BDAE009450CC /* ProcrasnationBlocker (iOS).entitlements */,
 				CE7F64C62D207CE40060BAB5 /* Shared (App) */,
 				CE7F64CF2D207CE40060BAB5 /* Shared (Extension) */,
 				CE7F64E02D207CE40060BAB5 /* iOS (App) */,
@@ -231,6 +247,12 @@
 				CE7F64E52D207CE40060BAB5 /* LaunchScreen.storyboard */,
 				CE7F64E82D207CE40060BAB5 /* Main.storyboard */,
 				CE7F64EB2D207CE40060BAB5 /* Info.plist */,
+				CE37EF742D20BA63009450CC /* AppDataManager.swift */,
+				CE37EF762D20BA7D009450CC /* BlacklistView.swift */,
+				CE37EF782D20BA95009450CC /* MainTabView.swift */,
+				CE37EF7A2D20BAB2009450CC /* PornBlockerView.swift */,
+				CE37EF7C2D20BADC009450CC /* SocialMediaBlacklistView.swift */,
+				CE37EF7E2D20BAEE009450CC /* WhitelistView.swift */,
 			);
 			path = "iOS (App)";
 			sourceTree = "<group>";
@@ -447,9 +469,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE37EF7D2D20BADC009450CC /* SocialMediaBlacklistView.swift in Sources */,
 				CE7F65152D207CE40060BAB5 /* ViewController.swift in Sources */,
+				CE37EF752D20BA63009450CC /* AppDataManager.swift in Sources */,
 				CE7F64E22D207CE40060BAB5 /* AppDelegate.swift in Sources */,
+				CE37EF7B2D20BAB2009450CC /* PornBlockerView.swift in Sources */,
 				CE7F64E42D207CE40060BAB5 /* SceneDelegate.swift in Sources */,
+				CE37EF772D20BA7D009450CC /* BlacklistView.swift in Sources */,
+				CE37EF792D20BA95009450CC /* MainTabView.swift in Sources */,
+				CE37EF7F2D20BAEE009450CC /* WhitelistView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,8 +669,10 @@
 		CE7F652E2D207CE40060BAB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ProcrasnationBlocker Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JTFH77HVY7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "ProcrasnationBlocker Extension";
@@ -671,8 +701,10 @@
 		CE7F652F2D207CE40060BAB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "ProcrasnationBlocker Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JTFH77HVY7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "ProcrasnationBlocker Extension";
@@ -705,8 +737,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ProcrasnationBlocker (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JTFH77HVY7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ProcrasnationBlocker;
@@ -742,8 +776,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ProcrasnationBlocker (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JTFH77HVY7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ProcrasnationBlocker;
