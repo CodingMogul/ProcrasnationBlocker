@@ -1,44 +1,66 @@
 console.log("Safari Background Service Worker initialized.");
 
-// Function to send a message to the extension handler to get blocked URLs
+// Function to get blocked URLs from extension handler
 function getBlockedUrls() {
-    console.log("Fetching blocked URLs from extension handler...");
-    return new Promise((resolve, reject) => {
-        safari.extension.dispatchMessage("getBlockedSites", {}, (response) => {
-            if (response && response.blockedSites) {
-                console.log("Blocked URLs received:", response.blockedSites);
-                resolve(response.blockedSites);
-            } else {
-                console.error("Failed to retrieve blocked URLs.");
-                reject("Failed to retrieve blocked URLs");
-            }
-        });
-    });
-}
+  console.log("=== getBlockedUrls called ===");
+  return new Promise((resolve, reject) => {
+    const message = { message: "getBlockedSites" };
+    console.log("Sending message to native handler:", message);
 
-// Event listener for messages from the Safari extension
-if (typeof safari !== "undefined" && safari.application) {
-    console.log("Setting up Safari application event listener...");
-    safari.application.addEventListener("message", async (event) => {
-        console.log("Message received in background script:", event.name);
+    browser.runtime.sendNativeMessage(message, (response) => {
+      console.log("=== Native Response ===");
+      console.log("Raw response:", response);
+      console.log("Response type:", typeof response);
+      console.log("Response keys:", response ? Object.keys(response) : "null");
 
-        if (event.name === "getBlockedUrls") {
-            try {
-                console.log("Processing 'getBlockedUrls' message...");
-                // Wait for the blocked URLs to be retrieved
-                const blockedUrls = await getBlockedUrls();
-                console.log("Blocked URLs retrieved successfully:", blockedUrls);
-
-                // Send the blocked URLs back to the content script
-                event.target.page.dispatchMessage("blockedUrls", { urls: blockedUrls });
-            } catch (error) {
-                console.error("Error retrieving blocked URLs:", error);
-                event.target.page.dispatchMessage("blockedUrls", { urls: [] }); // Send an empty list on error
-            }
+      if (response && response.message) {
+        console.log("Message content:", response.message);
+        if (response.message.blockedSites) {
+          console.log("Found blocked sites:", response.message.blockedSites);
+          resolve(response.message.blockedSites);
         } else {
-            console.error("Unknown message type received:", event.name);
+          console.error("No blockedSites in message");
+          console.log(
+            "Message structure:",
+            JSON.stringify(response.message, null, 2)
+          );
+          resolve([]);
         }
+      } else {
+        console.error("Unexpected response format");
+        console.log("Full response:", JSON.stringify(response, null, 2));
+        resolve([]);
+      }
     });
-} else {
-    console.error("Safari application object not available.");
+  });
 }
+
+browser.runtime.onMessage.addListener(async (message, sender, sendResponse) => {
+  console.log("=== Background Message Received ===");
+  console.log("Message:", message);
+  console.log("Sender:", sender);
+
+  if (message.name === "getBlockedUrls") {
+    try {
+      console.log("Fetching blocked URLs...");
+      const blockedUrls = await getBlockedUrls();
+      console.log("Fetched blocked URLs:", blockedUrls);
+
+      const response = {
+        name: "blockedUrls",
+        urls: blockedUrls,
+      };
+      console.log("Sending response to content script:", response);
+
+      await browser.tabs.sendMessage(sender.tab.id, response);
+      console.log("Response sent successfully");
+    } catch (error) {
+      console.error("Error in background script:", error);
+      console.error("Stack:", error.stack);
+      browser.tabs.sendMessage(sender.tab.id, {
+        name: "blockedUrls",
+        urls: [],
+      });
+    }
+  }
+});

@@ -2,9 +2,16 @@ import SwiftUI
 
 struct BlacklistView: View {
     @State private var website = "" // Input for a new website
-    @State private var blacklist: [String] = AppDataManager.shared.loadBlacklist() // Load cached websites
+    @State private var blacklist: [String] = [] // Load cached websites
     @FocusState private var isFocused: Bool // Focus for the input field
-
+    
+    init() {
+        // Test UserDefaults access when view is created
+        AppDataManager.shared.testUserDefaultsAccess()
+        // Load initial blacklist
+        _blacklist = State(initialValue: AppDataManager.shared.loadBlacklist())
+    }
+    
     var body: some View {
         VStack {
             // Input field for adding a website
@@ -16,10 +23,13 @@ struct BlacklistView: View {
 
                 Button(action: {
                     if !website.isEmpty {
-                        blacklist.append(website) // Add new website to the list
-                        AppDataManager.shared.saveBlacklist(blacklist) // Save updated blacklist
-                        website = "" // Clear the input field
-                        isFocused = false // Dismiss the keyboard
+                        blacklist.append(website)
+                        AppDataManager.shared.saveBlacklist(blacklist)
+                        website = ""
+                        isFocused = false
+                        
+                        // Debug: Print all data after saving
+                        AppDataManager.shared.debugPrintAllData()
                     }
                 }) {
                     Image(systemName: "plus.circle.fill")
@@ -63,6 +73,12 @@ struct BlacklistView: View {
                     }
                 }
             }
+
+            // Add a debug button
+            Button("Test UserDefaults") {
+                AppDataManager.shared.testUserDefaultsAccess()
+            }
+            .padding()
         }
         .navigationTitle("Blacklist")
         .navigationBarTitleDisplayMode(.inline)
