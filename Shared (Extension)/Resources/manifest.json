@@ -9,16 +9,35 @@
         "128": "images/icon-128.png"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "activeTab",
+        "scripting",
+        "tabs"
     ],
     "host_permissions": [
         "*://*/*"
     ],
+    "background": {
+        "service_worker": "background.js"
+    },
     "content_scripts": [
         {
             "matches": ["*://*/*"],
             "js": ["content.js"],
             "run_at": "document_start"
+        },
+        {
+            "matches": ["*://*/*"],
+            "js": ["block.js"],
+            "run_at": "document_idle"
         }
-    ]
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "48": "images/icon-48.png",
+            "96": "images/icon-96.png",
+            "128": "images/icon-128.png"
+        }
+    }
 }
