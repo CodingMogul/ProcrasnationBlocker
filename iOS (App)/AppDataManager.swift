@@ -50,7 +50,6 @@ class AppDataManager {
         } else {
             print("❌ CRITICAL: Failed to initialize UserDefaults!")
         }
-        debugPrintAllData()
     }
 
     // MARK: - Blacklist
@@ -77,7 +76,6 @@ class AppDataManager {
             print("❌ Failed to verify saved blacklist!")
         }
         
-        debugPrintAllData()
     }
 
     func loadBlacklist() -> [String] {
@@ -114,62 +112,31 @@ class AppDataManager {
         return userDefaults?.bool(forKey: "blockerStatus") ?? false
     }
 
-    // MARK: - Social Media Blacklist
-    /// Save Social Media Blacklist as a dictionary with the site and its toggle state
-    func saveSocialMediaBlacklist(_ blacklist: [String: Bool]) {
-        userDefaults?.set(blacklist, forKey: "socialMediaBlacklist")
+    func saveRemoveGoogleAds(_ isEnabled: Bool) {
+        userDefaults?.set(isEnabled, forKey: "removeGoogleAds")
     }
 
-    /// Load Social Media Blacklist as a dictionary
-    func loadSocialMediaBlacklist() -> [String: Bool] {
-        return userDefaults?.dictionary(forKey: "socialMediaBlacklist") as? [String: Bool] ?? [:]
+    func loadRemoveGoogleAds() -> Bool {
+        return userDefaults?.bool(forKey: "removeGoogleAds") ?? false
     }
 
-    func debugPrintAllData() {
-        print("\n=== AppDataManager Debug ===")
-        if let defaults = userDefaults {
-            print("UserDefaults contents for group \(appGroupID):")
-            let dict = defaults.dictionaryRepresentation()
-            if dict.isEmpty {
-                print("⚠️ UserDefaults is empty!")
-            } else {
-                for (key, value) in dict {
-                    print("🔑 Key: \(key)")
-                    print("📝 Value: \(value)")
-                }
-            }
-        } else {
-            print("❌ ERROR: UserDefaults is nil!")
-        }
-        print("=== End Debug ===\n")
+    func saveRemoveImages(_ isEnabled: Bool) {
+        userDefaults?.set(isEnabled, forKey: "removeImages")
     }
 
-    // Add a test method to verify UserDefaults access
-    func testUserDefaultsAccess() {
-        print("\n=== Testing UserDefaults Access ===")
-        guard let defaults = userDefaults else {
-            print("❌ ERROR: Could not access UserDefaults!")
-            return
-        }
-        
-        // Try writing and reading a test value
-        let testKey = "testKey"
-        let testValue = ["test.com"]
-        
-        print("Writing test value: \(testValue)")
-        defaults.set(testValue, forKey: testKey)
-        defaults.synchronize()
-        
-        if let readValue = defaults.array(forKey: testKey) as? [String] {
-            print("✅ Successfully read test value: \(readValue)")
-        } else {
-            print("❌ Failed to read test value!")
-        }
-        
-        // Clean up
-        defaults.removeObject(forKey: testKey)
-        defaults.synchronize()
-        print("=== End Test ===\n")
+    func loadRemoveImages() -> Bool {
+        return userDefaults?.bool(forKey: "removeImages") ?? false
     }
+
+    func saveRemoveVideos(_ isEnabled: Bool) {
+        userDefaults?.set(isEnabled, forKey: "removeVideos")
+    }
+
+    func loadRemoveVideos() -> Bool {
+        return userDefaults?.bool(forKey: "removeVideos") ?? false
+    }
+
+
+
 }
 

@@ -20,6 +20,11 @@
       "js": ["content.js"],
       "matches": ["<all_urls>"],
       "run_at": "document_start"
+    },
+    {
+      "js": ["block.js"],
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle"
     }
   ],
   "permissions": ["nativeMessaging", "tabs", "<all_urls>"],

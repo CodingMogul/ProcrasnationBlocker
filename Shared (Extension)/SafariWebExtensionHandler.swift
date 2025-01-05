@@ -73,6 +73,17 @@ class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
             response.userInfo = [SFExtensionMessageKey: responseDict]
             
             os_log(.default, "Final response structure: %@", response.userInfo ?? [:])
+        } else if message == "getBlockingConfig" {
+            let config = [
+                "removeVideos": userDefaults?.bool(forKey: "removeVideos") ?? false,
+                "removeImages": userDefaults?.bool(forKey: "removeImages") ?? false,
+                "removeGoogleAds": userDefaults?.bool(forKey: "removeGoogleAds") ?? false
+            ]
+            
+            let responseDict = ["message": config]
+            response.userInfo = [SFExtensionMessageKey: responseDict]
+            
+            os_log(.default, "Sending blocking config: %@", config)
         }
 
         context.completeRequest(returningItems: [response], completionHandler: { success in

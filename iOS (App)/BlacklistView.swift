@@ -6,9 +6,7 @@ struct BlacklistView: View {
     @FocusState private var isFocused: Bool // Focus for the input field
     
     init() {
-        // Test UserDefaults access when view is created
-        AppDataManager.shared.testUserDefaultsAccess()
-        // Load initial blacklist
+        // Test UserDefaults access when view is created        // Load initial blacklist
         _blacklist = State(initialValue: AppDataManager.shared.loadBlacklist())
     }
     
@@ -29,7 +27,6 @@ struct BlacklistView: View {
                         isFocused = false
                         
                         // Debug: Print all data after saving
-                        AppDataManager.shared.debugPrintAllData()
                     }
                 }) {
                     Image(systemName: "plus.circle.fill")
@@ -76,7 +73,6 @@ struct BlacklistView: View {
 
             // Add a debug button
             Button("Test UserDefaults") {
-                AppDataManager.shared.testUserDefaultsAccess()
             }
             .padding()
         }
