@@ -1,30 +1,19 @@
-//
-//  MainTabView.swift
-//  ProcrastinationBlocker
-//
-//  Created by Daniel McKenzie on 12/28/24.
-//
 import SwiftUI
 
 struct MainTabView: View {
     var body: some View {
         TabView {
-            PornBlockerView()
+            MainListView() // Main screen with power button
                 .tabItem {
                     Image(systemName: "shield.fill")
                     Text("Blocker")
                 }
-            BlacklistView()
+            BlacklistView() // Updated Blacklist view
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Blacklist")
                 }
-            SocialMediaBlacklistView()
-                .tabItem {
-                    Image(systemName: "person.2.fill")
-                    Text("Social Media")
-                }
-            WhitelistView()
+            WhitelistView() // Updated Whitelist view
                 .tabItem {
                     Image(systemName: "checkmark.circle")
                     Text("Whitelist")
@@ -32,4 +21,3 @@ struct MainTabView: View {
         }
     }
 }
-
