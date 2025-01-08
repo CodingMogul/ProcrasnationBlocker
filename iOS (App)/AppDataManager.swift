@@ -135,6 +135,18 @@ class AppDataManager {
     func loadRemoveVideos() -> Bool {
         return userDefaults?.bool(forKey: "removeVideos") ?? false
     }
+    
+    
+    func saveTimerState(active: Bool, duration: Double) {
+        userDefaults?.set(active, forKey: "TimerActive")
+        userDefaults?.set(duration, forKey: "TimerDuration")
+    }
+
+    func loadTimerState() -> (active: Bool, duration: Double) {
+        let active = userDefaults?.bool(forKey: "TimerActive") ?? false
+        let duration = userDefaults?.double(forKey: "TimerDuration") ?? 0
+        return (active, duration)
+    }
 
 
 

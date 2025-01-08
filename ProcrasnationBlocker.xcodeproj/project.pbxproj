@@ -14,7 +14,6 @@
 		CE47F30E2D2265100008259D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47F30D2D2265100008259D /* OnboardingView.swift */; };
 		CE47F3102D22687C0008259D /* MainListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47F30F2D22687C0008259D /* MainListView.swift */; };
 		CE47F3122D2269A00008259D /* AddWebsiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE47F3112D2269A00008259D /* AddWebsiteView.swift */; };
-		CE7F64E22D207CE40060BAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64E12D207CE40060BAB5 /* AppDelegate.swift */; };
 		CE7F64E42D207CE40060BAB5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F64E32D207CE40060BAB5 /* SceneDelegate.swift */; };
 		CE7F64E72D207CE40060BAB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64E52D207CE40060BAB5 /* LaunchScreen.storyboard */; };
 		CE7F64EA2D207CE40060BAB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64E82D207CE40060BAB5 /* Main.storyboard */; };
@@ -52,6 +51,10 @@
 		CE7F65282D207CE40060BAB5 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D82D207CE40060BAB5 /* popup.css */; };
 		CE7F65292D207CE40060BAB5 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D92D207CE40060BAB5 /* popup.js */; };
 		CE7F652A2D207CE40060BAB5 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = CE7F64D92D207CE40060BAB5 /* popup.js */; };
+		CEC12D442D2DADE900659127 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC12D432D2DADE900659127 /* TimerView.swift */; };
+		CEC12D462D2DB96F00659127 /* porn-websites.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEC12D452D2DB96F00659127 /* porn-websites.txt */; };
+		CEC12D472D2DB96F00659127 /* porn-websites.txt in Resources */ = {isa = PBXBuildFile; fileRef = CEC12D452D2DB96F00659127 /* porn-websites.txt */; };
+		CEC12D492D2E342700659127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC12D482D2E342700659127 /* AppDelegate.swift */; };
 		CECACF192D28B3A40007256C /* block.js in Resources */ = {isa = PBXBuildFile; fileRef = CECACF182D28B3A40007256C /* block.js */; };
 		CECACF1A2D28B3A40007256C /* block.js in Resources */ = {isa = PBXBuildFile; fileRef = CECACF182D28B3A40007256C /* block.js */; };
 /* End PBXBuildFile section */
@@ -124,7 +127,6 @@
 		CE7F64D82D207CE40060BAB5 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
 		CE7F64D92D207CE40060BAB5 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		CE7F64DE2D207CE40060BAB5 /* ProcrasnationBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProcrasnationBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE7F64E12D207CE40060BAB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE7F64E32D207CE40060BAB5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE7F64E62D207CE40060BAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE7F64E92D207CE40060BAB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +140,9 @@
 		CE7F65062D207CE40060BAB5 /* ProcrasnationBlocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ProcrasnationBlocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7F650B2D207CE40060BAB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE7F650C2D207CE40060BAB5 /* ProcrasnationBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProcrasnationBlocker.entitlements; sourceTree = "<group>"; };
+		CEC12D432D2DADE900659127 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		CEC12D452D2DB96F00659127 /* porn-websites.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "porn-websites.txt"; sourceTree = "<group>"; };
+		CEC12D482D2E342700659127 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CECACF182D28B3A40007256C /* block.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = block.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -201,6 +206,7 @@
 		CE7F64C72D207CE40060BAB5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CEC12D452D2DB96F00659127 /* porn-websites.txt */,
 				CE7F64C82D207CE40060BAB5 /* Main.html */,
 				CE7F64CA2D207CE40060BAB5 /* Icon.png */,
 				CE7F64CB2D207CE40060BAB5 /* Style.css */,
@@ -248,7 +254,7 @@
 		CE7F64E02D207CE40060BAB5 /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				CE7F64E12D207CE40060BAB5 /* AppDelegate.swift */,
+				CEC12D482D2E342700659127 /* AppDelegate.swift */,
 				CE7F64E32D207CE40060BAB5 /* SceneDelegate.swift */,
 				CE7F64E52D207CE40060BAB5 /* LaunchScreen.storyboard */,
 				CE7F64E82D207CE40060BAB5 /* Main.storyboard */,
@@ -260,6 +266,7 @@
 				CE47F30D2D2265100008259D /* OnboardingView.swift */,
 				CE47F30F2D22687C0008259D /* MainListView.swift */,
 				CE47F3112D2269A00008259D /* AddWebsiteView.swift */,
+				CEC12D432D2DADE900659127 /* TimerView.swift */,
 			);
 			path = "iOS (App)";
 			sourceTree = "<group>";
@@ -417,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE7F650F2D207CE40060BAB5 /* Icon.png in Resources */,
+				CEC12D462D2DB96F00659127 /* porn-websites.txt in Resources */,
 				CE7F64E72D207CE40060BAB5 /* LaunchScreen.storyboard in Resources */,
 				CE7F650D2D207CE40060BAB5 /* Main.html in Resources */,
 				CE7F65132D207CE40060BAB5 /* Script.js in Resources */,
@@ -435,6 +443,7 @@
 				CE7F64F62D207CE40060BAB5 /* Main.storyboard in Resources */,
 				CE7F65142D207CE40060BAB5 /* Script.js in Resources */,
 				CE7F65182D207CE40060BAB5 /* Assets.xcassets in Resources */,
+				CEC12D472D2DB96F00659127 /* porn-websites.txt in Resources */,
 				CE7F650E2D207CE40060BAB5 /* Main.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,12 +487,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC12D492D2E342700659127 /* AppDelegate.swift in Sources */,
 				CE7F65152D207CE40060BAB5 /* ViewController.swift in Sources */,
 				CE47F3122D2269A00008259D /* AddWebsiteView.swift in Sources */,
 				CE37EF752D20BA63009450CC /* AppDataManager.swift in Sources */,
 				CE47F30E2D2265100008259D /* OnboardingView.swift in Sources */,
 				CE47F3102D22687C0008259D /* MainListView.swift in Sources */,
-				CE7F64E22D207CE40060BAB5 /* AppDelegate.swift in Sources */,
+				CEC12D442D2DADE900659127 /* TimerView.swift in Sources */,
 				CE7F64E42D207CE40060BAB5 /* SceneDelegate.swift in Sources */,
 				CE37EF772D20BA7D009450CC /* BlacklistView.swift in Sources */,
 				CE37EF792D20BA95009450CC /* MainTabView.swift in Sources */,
