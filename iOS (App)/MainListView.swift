@@ -144,34 +144,44 @@ struct MainListView: View {
 
     private func blockAllPorn(enabled: Bool) {
         print("blockAllPorn called with enabled: \(enabled)")
-        DispatchQueue.global(qos: .background).async { // Perform file operations in the background
-            if let filePath = Bundle.main.path(forResource: "porn-websites", ofType: "txt") {
-                do {
-                    let fileContents = try String(contentsOfFile: filePath)
-                    let pornSites = fileContents.split(separator: "\n").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
-                    var currentBlacklist = AppDataManager.shared.loadBlacklist()
 
-                    if enabled {
-                        for site in pornSites where !currentBlacklist.contains(site) {
-                            currentBlacklist.append(site)
-                        }
-                        print("Added porn sites to blacklist.")
-                    } else {
-                        currentBlacklist.removeAll { pornSites.contains($0) }
-                        print("Removed porn sites from blacklist.")
-                    }
+        // Get the file path
+        if let filePath = Bundle.main.path(forResource: "porn-websites", ofType: "txt") {
+            print("File found at: \(filePath)")
+            
+            do {
+                // Read the file content
+                let fileContents = try String(contentsOfFile: filePath)
+                print("File contents:\n\(fileContents)")
 
-                    // Save the updated blacklist back on the main thread
-                    DispatchQueue.main.async {
-                        AppDataManager.shared.saveBlacklist(currentBlacklist)
-                        print("Blacklist updated successfully.")
+                // Split content into an array of websites
+                let pornSites = fileContents.split(separator: "\n").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                print("Parsed websites:\n\(pornSites)")
+
+                // Load the current blacklist
+                var currentBlacklist = AppDataManager.shared.loadBlacklist()
+                print("Current blacklist before update:\n\(currentBlacklist)")
+
+                if enabled {
+                    // Add porn sites to the blacklist
+                    for site in pornSites where !currentBlacklist.contains(site) {
+                        currentBlacklist.append(site)
                     }
-                } catch {
-                    print("Error reading porn websites file: \(error)")
+                    print("Updated blacklist with porn sites:\n\(currentBlacklist)")
+                } else {
+                    // Remove porn sites from the blacklist
+                    currentBlacklist.removeAll { pornSites.contains($0) }
+                    print("Updated blacklist after removing porn sites:\n\(currentBlacklist)")
                 }
-            } else {
-                print("Porn websites file not found.")
+
+                // Save the updated blacklist
+                AppDataManager.shared.saveBlacklist(currentBlacklist)
+                print("Blacklist saved successfully.")
+            } catch {
+                print("Error reading porn websites file: \(error)")
             }
+        } else {
+            print("Porn websites file not found.")
         }
     }
 

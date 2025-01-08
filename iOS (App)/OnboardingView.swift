@@ -7,7 +7,7 @@ struct OnboardingView: View {
     let onboardingData = [
         OnboardingPage(imageName: "onboarding1", title: "Create a prototype in just a few minutes", description: "Enjoy these pre-made components and worry only about creating the best product ever."),
         OnboardingPage(imageName: "onboarding2", title: "Block distracting websites", description: "Use this app to add websites you want to block while working."),
-        OnboardingPage(imageName: "onboarding3", title: "Stay focused and productive", description: "Set up your focus sessions and let the app handle distractions.")
+        OnboardingPage(imageName: "onboarding3", title: "Enable the Safari Extension", description: "To start blocking unwanted content, please enable the Safari extension in your device settings.")
     ]
 
     var body: some View {
@@ -42,7 +42,33 @@ struct OnboardingView: View {
                         .cornerRadius(10)
                         .padding(.horizontal)
                 }
+
+                // "Go to Settings" button (only on the last onboarding page)
+                if currentPage == onboardingData.count - 1 {
+                    Button(action: openSafariExtensionSettings) {
+                        Text("Go to Safari Extension Settings")
+                            .frame(maxWidth: .infinity)
+                            .padding()
+                            .background(Color.green)
+                            .foregroundColor(.white)
+                            .cornerRadius(10)
+                            .padding(.horizontal)
+                    }
+                    .padding(.top, 10)
+                }
             }
+        }
+    }
+
+    private func openSafariExtensionSettings() {
+        if let url = URL(string: "App-prefs:Safari&path=EXTENSIONS") {
+            UIApplication.shared.open(url, options: [:], completionHandler: { success in
+                if success {
+                    print("Opened Safari Extension settings.")
+                } else {
+                    print("Failed to open Safari Extension settings.")
+                }
+            })
         }
     }
 }
