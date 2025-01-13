@@ -55,4 +55,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
     }
+
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        var backgroundTask: UIBackgroundTaskIdentifier = .invalid
+        
+        backgroundTask = UIApplication.shared.beginBackgroundTask {
+            UIApplication.shared.endBackgroundTask(backgroundTask)
+            backgroundTask = .invalid
+        }
+        
+        if backgroundTask != .invalid {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 180) {
+                UIApplication.shared.endBackgroundTask(backgroundTask)
+                backgroundTask = .invalid
+            }
+        }
+    }
 }
